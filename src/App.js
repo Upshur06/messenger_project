@@ -41,18 +41,23 @@ function App() {
       <h1>Hello World</h1>
       <h2>Welcome to the chatroom: {userName}</h2>
 
-      <form>
+      <form className='app_form'>
         <input vlaue={input} onChange={(e)=> setInput(e.target.value)}/>
         <button type='submit' onClick={sendMessageHandler}>Send Message</button>
       </form>
+        
+        <div className='messageCollection'>
 
-      {
-        messages.map((message)=>(
-          <p>
-            {message.user ? message.user : 'unknow user'}: {message.content}
-          </p>
-        ))
-      }
+        {
+          messages.map((message)=>(
+            <p>
+              {message.user ? message.user : 'unknow user'}: {message.content}
+            </p>
+          ))
+        }
+
+        </div>
+
     </div>
   );
 }

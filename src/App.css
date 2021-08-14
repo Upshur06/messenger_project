@@ -1,0 +1,20 @@
+/* .app_form{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* 
+.app_form input{
+    width: 100%;
+} */
+
+.messageCollection{
+    border: 2px solid blue;
+    height: 70vh;
+    margin: 40px;
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+}

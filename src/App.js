@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
 import './App.css';
 import { db } from './utils/firebase';
-
+import InputEmoji from 'react-input-emoji'
 
 function App() {
 
@@ -22,7 +22,6 @@ function App() {
     );
   },[])
 
-
   const sendMessageHandler = (e) => {
       e.preventDefault();
 
@@ -36,13 +35,24 @@ function App() {
   } 
   console.log(messages)
 
+  const divStyle = {
+    border: '2px solid green',
+    marginLeft: '30px',
+    marginRight: '30px',
+    display: 'flex',
+  };
+
   return (
     <div className="App">
       <h1>Hello World</h1>
       <h2>Welcome to the chatroom: {userName}</h2>
 
-      <form className='app_form'>
-        <input vlaue={input} onChange={(e)=> setInput(e.target.value)}/>
+      <form className='app_form' style={divStyle}>
+        <InputEmoji
+            value={input}
+            onChange={setInput}
+            placeholder="Type a message"
+        />
         <button type='submit' onClick={sendMessageHandler}>Send Message</button>
       </form>
         

@@ -18,3 +18,7 @@
     overflow: hidden;
     overflow-y: scroll;
 }
+
+.app_form button{
+    width: 20vw;
+} 
